@@ -17,7 +17,7 @@ public class RegresTest{
         List<UserData> users = given().
                 when()
                 .contentType(ContentType.JSON)
-                .get(URL + "api/users?page=2")
+                .get(URL + "/api/users?page=2")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", UserData.class);
         System.out.println("1");
